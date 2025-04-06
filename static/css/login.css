@@ -1,0 +1,322 @@
+:root {
+  --primary-color: #000000;
+  --secondary-color: #333333;
+  --accent-color: #FFD700;
+  --background-color: #f0f0f0;
+  --text-color: #333;
+  --light-text-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.head-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;  
+}
+
+.nav-links {
+  display: flex;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-links a {
+  padding: 5px 8px;
+  color: var(--light-text-color);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-links a:hover {
+  color: var(--light-text-color);
+  border: 1px solid white;
+  text-decoration: none;
+}
+
+.active-nav {
+  border: 1px solid white;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--light-text-color);
+}
+
+.form-box {
+  min-width: 400px;
+  width: 30vw;
+  background-color: lightgray;
+  border-radius: 20px;
+  padding: 1rem 0;
+  margin: 11rem auto 4rem;
+}
+
+.register-container {
+  width: 100%;
+  background-color: lightgray;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub {
+  padding: 15px 0 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.sub2 {
+  padding: 0 10px;
+}
+
+.sub1-1,
+.sub1-2,
+.sub3-1,
+.sub3-2,
+.sub4-1,
+.sub4-2,
+.sub4-3,
+.sub5-1,
+.sub5-2 {
+  flex: 1;
+  padding: 0 10px;
+}
+
+#prepass, #preid{
+  max-height: 400px;
+  display: none;
+}
+
+#passpreview, #idcardpreview{
+  max-height: 400px;
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.form-grp {
+  padding: 0 0 15px;
+}
+
+.address {
+  width: 100%;
+  flex: 1;
+}
+
+.button-container {
+  margin: 2rem auto 2rem;
+  width: 220px;
+  box-shadow: 0 0 20px 7px #212529;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+
+.active-btn {
+  background-color: #212529;
+  color: white;
+  border-radius: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.login-container {
+  padding: 25px;
+  width: 100%;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px auto;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+}
+
+.submit-cont {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.submit-btn {
+  width: 220px;
+  padding: 10px 30px;
+  cursor: pointer;
+  margin: 10px auto 0;
+  background-color: #212529;
+  color: white;
+  font-weight: bold;
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+
+.check-box {
+  /* Login page */
+  margin: 30px 10px 30px 0;
+}
+
+.checkboxes {
+  /* Registration Page */
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+.sub-check {
+  padding: 5px 0;
+  flex: 1;
+}
+
+@media only screen and (max-width: 767px) {
+  .body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .container {
+    transition: transform 0.3s ease-in-out;
+    padding: 0;
+  }
+
+  .logo{
+    font-size: 22px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+  
+  .nav-links a{
+      margin: 0 0 0 1.5rem;
+  }
+
+  .sub-nav {
+    margin-left: 10px;
+  }
+
+  .form-box {
+    min-width: 95%;
+    width: 95%;
+  }
+
+  .sub {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .sub1-1,
+  .sub1-2,
+  .sub3-1,
+  .sub3-2,
+  .sub4-1,
+  .sub4-2,
+  .sub4-3,
+  .sub5-1,
+  .sub5-2 {
+    padding: 0;
+  }
+
+  .sub2 {
+    padding: 0 0 10px;
+  }
+
+  #passpreview, #idcardpreview{
+    max-height: 300px;
+  }
+
+  .checkboxes {
+    padding: 0;
+  }
+}
