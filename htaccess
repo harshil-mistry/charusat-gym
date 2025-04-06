@@ -1,0 +1,17 @@
+php_value display_errors On
+php_value mbstring.http_input auto
+php_value date.timezone Asia/Kolkata
+# Enable Rewrite Engine
+RewriteEngine On
+# Skip Rewrite for Real Directories
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+# Skip Rewrite for Real Files
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+# Redirect .php URLs to Clean URLs
+RewriteCond %{THE_REQUEST} s(.+).phps [NC]
+RewriteRule ^(.+).php$ /$1 [R=301,L]
+# Serve Clean URLs for .php Files
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L,QSA]
